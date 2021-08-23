@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "ChallengeLC",
+    "slug": "ChallengeLC",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "ChallengeLC"
+}

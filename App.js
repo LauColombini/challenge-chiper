@@ -1,21 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler'
+import React from 'react'
+import { Image, StatusBar, StyleSheet, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function App() {
+import { ContainerNav } from './src/navigation/ContainerNav';
+
+const App = () => {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <NavigationContainer>
+      <StatusBar backgroundColor='#FF1436' />
+      <View style={styles.container}>
+        <Image style={{ width: 125, height: 49 }} source={{ uri: 'http://s3.amazonaws.com/chiper/wp-content/uploads/2018/02/28141911/logo-chiper1.png' }} />
+      </View>
+      <ContainerNav />
+    </NavigationContainer>
+  )
 }
+
+export default App
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    paddingTop: 10,
+    paddingBottom: 10,
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    alignContent: 'center',
+    backgroundColor: '#FF1436'
+  }
+})
